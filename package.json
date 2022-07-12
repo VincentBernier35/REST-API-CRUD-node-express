@@ -1,0 +1,27 @@
+{
+  "name": "node-express-crud-api-v2",
+  "version": "1.0.0",
+  "description": "RESR API CRUD",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentBernier35/REST-API-CRUD-node-express.git"
+  },
+  "keywords": [],
+  "author": "Vincent BERNIER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentBernier35/REST-API-CRUD-node-express/issues"
+  },
+  "homepage": "https://github.com/VincentBernier35/REST-API-CRUD-node-express#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
