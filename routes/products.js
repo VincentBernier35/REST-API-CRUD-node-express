@@ -11,7 +11,7 @@ router.post("/", createProduct);     // Create
 router.get("/", fetchProducts);      // Read
 router.get("/:id", fetchOneProduct); // Read
 router.patch("/:id", updateProduct); // Update
-router.post("/:id", deleteProduct);  // Delete
+router.delete("/:id", deleteProduct);  // Delete
 
 module.exports = router;
 

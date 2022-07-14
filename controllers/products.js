@@ -1,46 +1,47 @@
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuid } = require('uuid');
 
-let products = [
-  {
-    name: "keyboard",
-    price: 29
-  },
-  {
-    name: "screen",
-    price: 149
-  }
-];
+let products = [];
 
+// READ all products
 const fetchProducts = (req, res) => {
-  console.log(products);
+  const product = req.body;
+  console.log(`READ Products in the database`); 
   res.send(products);
 };
 
+// READ one products
 const fetchOneProduct = (req, res) => {
-  res.send(req.params.id)
-  console.log("hello");
+  const { id } = req.params;
+
+  const oneProduct = products.find((product) => product.id == id);
+  res.send(oneProduct); 
+  console.log("READ ONE ", req.params);
 };
 
+// CREATE one product
 const createProduct = (req, res) => {   
   const product = req.body;
-  products.push({...user, id: uuid()});
-  
-  console.log(`Product [${product.name}] added to the database.`);
+  products.push({...product, id: uuid()});
+  console.log(`CREATE Product [${product.name}] added to the database.`);
 };
 
+// UPDATE one product
 const updateProduct =  (req,res) => {
-  const product = products.find((product) => product.id === req.params.id);
+  const product = products.find((product) =>  product.id === req.params.id);
   
   product.name = req.body.name;
   product.price = req.body.price;
 
-  console.log(`username has been updated to ${req.body.username}.price has been updated to ${req.body.price}`)
+  console.log(`UPDATE Product name has been updated to ${req.body.name}. Price has been updated to ${req.body.price}.`)
 };
 
+// DELETE one product
 const deleteProduct = (req, res) => { 
-  console.log(`product with id ${req.params.id} has been deleted`);
-  
-  products = users.filter((user) => user.id !== req.params.id);
+
+  products = products.filter((product) => product.id !== req.params.id);
+  console.log(`DELETE product with id ${req.params.id} has been deleted`);
+
 };
+
 
 module.exports = { fetchProducts, fetchOneProduct, createProduct, updateProduct, deleteProduct };

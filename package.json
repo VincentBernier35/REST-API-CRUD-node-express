@@ -1,7 +1,7 @@
 {
   "name": "node-express-crud-api-v2",
   "version": "1.0.0",
-  "description": "RESR API CRUD",
+  "description": "REST API CRUD",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
