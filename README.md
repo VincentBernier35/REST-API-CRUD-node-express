@@ -20,5 +20,6 @@ You can use this ID to precisely target products in order to delete them, or mod
 - to simplify as much as possible, there is voluntarily no database.
 To replace it, there is a simple empty array `let products = []` which is declared in the controller.
 So to test, and to manipulate this code, you have to start by creating products and then read, modify or delete them.
+- The best way to test all the routes is to use Insomnia or Postman.
 
 Have fun !
