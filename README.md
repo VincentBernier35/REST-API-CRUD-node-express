@@ -1,4 +1,4 @@
-# Exemple of a very simple REST API
+# Exemple of a simple REST API
 
 ## Made with
 
@@ -11,7 +11,7 @@
 UUID is used to give a unique index to each product that will be created.
 You can use this ID to precisely target products in order to delete them, or modify them.
 
-## How to test this tiny app ?
+## How to test this app ?
 
 - first step after you've clone this repository : `npm install`
 
